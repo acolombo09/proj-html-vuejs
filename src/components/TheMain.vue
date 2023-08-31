@@ -1,6 +1,10 @@
 <script>
+import HeroSection from "./HeroSection.vue"
 
 export default {
+  components: {
+    HeroSection,
+  },
   data() {
     return {
       
@@ -11,7 +15,7 @@ export default {
 
 <template>
   <main>
-    
+    <HeroSection></HeroSection>
   </main>
 </template>
 
