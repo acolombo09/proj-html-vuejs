@@ -2,13 +2,7 @@
 export default {
   data() {
     return {
-      navLinks: [
-        { name: "HOME"},
-        { name: "SERVICES"},
-        { name: "ABOUT"},
-        { name: "PROJECTS"},
-        { name: "RESULTS"},
-      ],
+      
     };
   },
 };
@@ -46,23 +40,6 @@ export default {
         </div>
       </div>
     </div>
-
-    <div class="header-bottom bg-transparent py-3">
-      <div class="row">
-        <div class="col-md-9 d-flex align-items-center justify-content-between mx-auto px-0">
-          <img src="../assets/logo.PNG" alt="nexgen-logo-header">
-          <ul class="nav nav-pills">
-            <li class="nav-item me-3" v-for="link in navLinks">
-              <a href="#" class="nav-link">{{link.name}}</a>
-            </li>
-            <li class="nav-item me-3">
-              <a href="#" class="nav-link active">GET IN TOUCH</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    
   </header>
 </template>
 
@@ -70,9 +47,7 @@ export default {
 
 @use "../styles/partials/variables" as *;
 
-header img {
-  width: 150px;
-}
+
 
 // header .nav-link {
 //   color: black;
