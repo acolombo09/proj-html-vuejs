@@ -11,11 +11,11 @@ export default {
 
 <template>
   <!-- About section The Company -->
-  <div class="px-4 py-5 bg-black">
+  <div class="about-section px-4 py-5" style="background-color: #111117;">
     <div class="col-md-9 mx-auto">
       <div class="row flex-lg-row-reverse align-items-center g-5">
         <div class="col-md-6">
-          <img src="../assets/images/about-4.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          
         </div>
         <div class="col-md-6">
           <h5 class="fw-bold text-success lh-1 mb-3">ABOUT THE NETWORK</h5>
@@ -27,39 +27,39 @@ export default {
           <div class="col my-5">
             <div class="row row-cols-1 row-cols-sm-2 g-4">
               <div class="col d-flex flex-column gap-2">
-                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                  <svg class="bi" width="1rem" height="1rem">
-                    <use xlink:href="#collection"></use>
-                  </svg>
+                <div class="d-flex align-items-center">
+                  <div class="d-inline-flex align-items-center justify-content-center me-2 fs-5 rounded-3">
+                    <i class="fa-solid fa-award" style="color: #ffffff;"></i>
+                  </div>
+                  <h4 class="fw-semibold mb-0 text-white">Tradition</h4>
                 </div>
-                <h4 class="fw-semibold mb-0 text-white">Tradition</h4>
                 <p class="text-white">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
               </div>
               <div class="col d-flex flex-column gap-2">
-                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                  <svg class="bi" width="1rem" height="1rem">
-                    <use xlink:href="#gear-fill"></use>
-                  </svg>
+                <div class="d-flex align-items-center">
+                  <div class="d-inline-flex align-items-center justify-content-center me-2 fs-5 rounded-3">
+                    <i class="fa-solid fa-lock" style="color: #ffffff;"></i>
+                  </div>
+                  <h4 class="fw-semibold mb-0 text-white">Security</h4>
                 </div>
-                <h4 class="fw-semibold mb-0 text-white">Security</h4>
                 <p class="text-white">Lorem ipsum dolor sit amet consectetur adipiscing elit..</p>
               </div>
               <div class="col d-flex flex-column gap-2">
-                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                  <svg class="bi" width="1rem" height="1rem">
-                    <use xlink:href="#speedometer"></use>
-                  </svg>
+                <div class="d-flex align-items-center">
+                  <div class="d-inline-flex align-items-center justify-content-center me-2 fs-5 rounded-3">
+                    <i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i>
+                  </div>
+                  <h4 class="fw-semibold mb-0 text-white">Certificate</h4>
                 </div>
-                <h4 class="fw-semibold mb-0 text-white">Certificate</h4>
                 <p class="text-white">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
               </div>
               <div class="col d-flex flex-column gap-2">
-                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                  <svg class="bi" width="1rem" height="1rem">
-                    <use xlink:href="#table"></use>
-                  </svg>
+                <div class="d-flex align-items-center">
+                  <div class="d-inline-flex align-items-center justify-content-center me-2 fs-5 rounded-3">
+                    <i class="fa-solid fa-graduation-cap fa-flip-horizontal" style="color: #ffffff;"></i>
+                  </div>
+                  <h4 class="fw-semibold mb-0 text-white">Expertise</h4>
                 </div>
-                <h4 class="fw-semibold mb-0 text-white">Expertise</h4>
                 <p class="text-white">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
               </div>
             </div>
@@ -72,6 +72,7 @@ export default {
         </div>
       </div>
     </div>
+    <!-- <img src="../assets/images/about-4.jpg" class="about-image" alt="Background Image"> -->
   </div>
 </template>
 
@@ -79,6 +80,12 @@ export default {
 
 @use "../styles/partials/variables" as *;
 
-
+.about-section {
+  background: url(../assets/images/about-4.jpg) no-repeat center right; /* Imposta l'immagine come sfondo, posizionata al centro a destra */
+  background-size: cover; /* Copre tutto lo sfondo */
+  background-color: #111117; /* Colore di sfondo */
+  min-height: 600px; /* Altezza minima del div */
+  padding: 20px; /* Spazio interno */
+}
 
 </style>
