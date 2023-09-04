@@ -34,38 +34,78 @@ export default {
 <template>
   <footer>
 
-    <div class="footer-upper py-3 bg-dark">
+    <div class="footer-upper py-3" style="background-color: #111117;">
       <div class="row row-cols-md-4 py-5 my-3">
         <div class="col-md-9 d-flex justify-content-evenly align-items-center mx-auto">
-          <div class="col border border-light mx-4 text-light bg-secondary">
-            <p class="text-light">© 2023</p>
+          <div class="col mx-4 text-light">
+            <div class="p-4">
+              <div class="mb-3">
+                <img src="../assets/logo.PNG" alt="nexgen-logo-footer">
+                <p class="text-secondary my-4">
+                  A Functional HTML Template for Corporate & Business
+                </p>
+              </div>
+              <div class="dbox w-100 d-flex align-items-start my-2">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="ms-4">
+                  <a href="#">
+                    <p class="d-inline-block text-secondary">+1 (305) 1234-5678</p>
+                  </a>
+                </div>
+              </div>
+              <div class="dbox w-100 d-flex align-items-start my-2">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="ms-4">
+                  <a href="#">
+                    <p class="d-inline-block text-secondary">hello@example.com</p>
+                  </a>
+                </div>
+              </div>
+              <div class="dbox w-100 d-flex align-items-start my-2">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="ms-4">
+                  <a href="#">
+                    <p class="d-inline-block text-secondary">Main Avenue, 987</p>
+                  </a>
+                </div>
+              </div>
+              <div class="dbox w-100 d-flex align-items-start my-2">
+                <button type="button" class="btn btn-outline-success px-4 rounded-1">GET IN TOUCH</button>
+              </div>
+            </div>
           </div>
-          <div class="col d-flex justify-content-center border border-light mx-4 text-light bg-secondary">
+          <div class="col d-flex justify-content-center mx-4 py-5 text-light" style="background-color: #19191f;">
             <div class="div">
-              <h5 class="mb-3">About</h5>
+              <h5 class="mb-3 fw-bold">About</h5>
               <ul class="nav flex-column">
                 <li class="nav-item mb-2" v-for="link in AboutLinks">
-                  <a href="#" class="nav-link p-0 text-decoration-none text-light">> {{ link.name }}</a>
+                  <a href="#" class="nav-link p-0 text-decoration-none text-secondary">> {{ link.name }}</a>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col d-flex justify-content-center border border-light mx-4 text-light bg-secondary">
+          <div class="col d-flex justify-content-center mx-4 py-5 text-light" style="background-color: #19191f;">
             <div class="div">
-              <h5 class="mb-3">Services</h5>
+              <h5 class="mb-3 fw-bold">Services</h5>
               <ul class="nav flex-column">
                 <li class="nav-item mb-2" v-for="link in ServicesLinks">
-                  <a href="#" class="nav-link p-0 text-decoration-none text-light">> {{ link.name }}</a>
+                  <a href="#" class="nav-link p-0 text-decoration-none text-secondary">> {{ link.name }}</a>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col d-flex justify-content-center border border-light mx-4 text-light bg-secondary">
+          <div class="col d-flex justify-content-center mx-4 py-5 text-light" style="background-color: #19191f;">
             <div class="div">
-              <h5 class="mb-3">Support</h5>
+              <h5 class="mb-3 fw-bold">Support</h5>
               <ul class="nav flex-column">
                 <li class="nav-item mb-2" v-for="link in SupportLinks">
-                  <a href="#" class="nav-link p-0 text-decoration-none text-light">> {{ link.name }}</a>
+                  <a href="#" class="nav-link p-0 text-decoration-none text-secondary">> {{ link.name }}</a>
                 </li>
               </ul>
             </div>
@@ -93,5 +133,9 @@ export default {
 <style lang="scss" scoped>
 
 @use "../styles/partials/variables" as *;
+
+.footer-upper img {
+  width: 150px;
+}
 
 </style>

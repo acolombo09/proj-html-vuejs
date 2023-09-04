@@ -26,7 +26,7 @@ export default {
             <img src="../assets/logo.PNG" alt="nexgen-logo-header">
             <ul class="nav nav-pills">
               <li class="nav-item me-3" v-for="link in navLinks">
-                <a href="#" class="nav-link">{{link.name}}</a>
+                <a href="#" class="nav-link text-success">{{link.name}}</a>
               </li>
               <li class="nav-item me-3">
                 <a href="#" class="nav-link active rounded-1">GET IN TOUCH</a>

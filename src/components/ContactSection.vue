@@ -46,7 +46,12 @@ export default {
                       </div>
                       <div class="col-md-6 my-2">
                         <div class="form-group">
-                          <input type="text" class="form-control rounded-1" name="moreinfo" id="moreinfo" placeholder="More Info">
+                          <select class="form-select rounded-1" id="exampleSelect">
+                            <option selected="">More Info</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
                         </div>
                       </div>
                       <div class="col-md-12 my-2">
@@ -123,7 +128,7 @@ export default {
 
 @use "../styles/partials/variables" as *;
 
-.form-control {
+.form-control, select {
   background-color: $form-bg-color;
 }
 
