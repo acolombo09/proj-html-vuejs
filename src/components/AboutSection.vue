@@ -63,7 +63,7 @@ export default {
           </div>
 
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <button type="button" class="btn btn-success custom-button px-4 me-2 text-icons-color">GET IN TOUCH</button>
+            <button type="button" class="btn btn-success custom-button px-4 me-3 text-icons-color">GET IN TOUCH</button>
             <button type="button" class="btn btn-outline-light px-4 text-icons-color border border-icons-color">READ MORE</button>
           </div>
         </div>

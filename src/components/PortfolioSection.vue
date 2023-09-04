@@ -4,6 +4,7 @@ export default {
   data() {
     return {
       projectsLinks: [
+        { name: "ALL"},
         { name: "INSTITUTIONAL"},
         { name: "SOCIAL"},
         { name: "EVENTS"},
@@ -11,7 +12,18 @@ export default {
         { name: "ENVIRONMENT"},
         { name: "TECHNOLOGY"},
       ],
+      // Aggiungo questa variabile per tenere traccia del link evidenziato
+      highlightedLink: null,
     };
+  },
+  methods: {
+    highlightLink(linkName) {
+      this.highlightedLink = linkName;
+    },
+    toggleHighlight() {
+      this.highlightedLink = null; 
+      // Rimuove l'evidenziazione quando viene fatto clic
+    },
   },
 };
 </script>
@@ -21,14 +33,15 @@ export default {
   <div class="px-4 py-5 my-5 bg-white">
     <div class="col-md-9 mx-auto my-4">
       <div class="d-flex flex-column justify-content-center align-items-center">
-        <h6 class="pb-2 text-success">WE DO MORE FOR EVERYONE</h6>
-        <h2 class="pb-2 mb-3 display-4 fw-bold text-body-emphasis">Actions & Projects</h2>
+        <h6 class="pb-2 fw-semibold text-icons-color">WE DO MORE FOR EVERYONE</h6>
+        <h2 class="pb-2 mb-3 display-4 fw-bold text-body-emphasis">Actions & <mark class="highlight-text">Projects</mark></h2>
         <ul class="nav nav-pills">
-          <li class="nav-item me-3">
-            <a href="#" class="nav-link active rounded-1">ALL</a>
-          </li>
           <li class="nav-item me-3" v-for="link in projectsLinks">
-            <a href="#" class="nav-link">{{link.name}}</a>
+            <a href="#" class="nav-link text-secondary"
+            :class="{ 'highlight-text': link.name === highlightedLink }" 
+            @mouseover="highlightLink(link.name)" 
+            @mouseout="highlightLink(null)" 
+            @click="toggleHighlight">{{link.name}}</a>
           </li>
         </ul>
       </div>
@@ -114,9 +127,37 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Colore con 50% di opacità */
-  opacity: 1; /* L'overlay è sempre visibile */
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
 }
 
+.hover-content {
+  display: none; /* Nascondi il contenuto all'inizio */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Sfondo nero trasparente */
+}
+
+.card:hover .hover-content {
+  display: flex; /* Mostra il contenuto all'hover */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlight-text {
+  background-color: rgba(#00A6A6, 0.2); 
+  color: $text-icons-color; 
+}
+
+.text-icons-color {
+  color: $text-icons-color !important;
+}
 
 </style>
