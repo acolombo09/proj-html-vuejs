@@ -1,0 +1,26 @@
+// Colori principali
+$main-color: #058283; // Colore principale per bottoni e evidenziati
+$text-color: #606D75; // Colore per testi secondari
+
+// Colori per lo sfondo
+$form-bg-color: #E2E3E7; // Sfondo per campi da compilare e sfondi alternativi
+$header-footer-text-color: #EBECEF; // Colore testi per header e footer
+$highlight-bg-color: #D9F2F2; // Sfondo per testi evidenziati
+$base-bg-color: #0D1B2A; // Colore di base per titoli principali e sfondi alternativi
+
+// Mixin per gestire il testo su sfondi colorati
+@mixin text-on-colored-bg($bg-color) {
+  color: if(lightness($bg-color) > 50, #000, #fff);
+}
+
+// Esempi di utilizzo delle variabili
+// .example-button {
+//   background-color: $main-color;
+//   color: $text-highlight-color;
+// }
+
+// .example-header {
+//   background-color: $base-bg-color;
+//   @include text-on-colored-bg($base-bg-color);
+// }
+
