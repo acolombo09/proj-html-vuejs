@@ -33,7 +33,9 @@ export default {
       <div class="header-bottom pt-3">
         <div class="row">
           <div class="col-md-9 d-flex align-items-center justify-content-between mx-auto px-0">
-            <img src="../assets/logo.PNG" alt="nexgen-logo-header">
+            <a href="#">
+              <img src="../assets/logo.PNG" alt="nexgen-logo-header">
+            </a>
             <ul class="nav nav-pills">
               <li class="nav-item me-3" v-for="link in navLinks">
                 <a href="#" class="nav-link text-header-secondary"
