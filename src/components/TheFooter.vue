@@ -117,9 +117,9 @@ export default {
     <div class="footer-bottom py-3 bg-black">
       <div class="row">
         <div class="col-md-9 d-flex justify-content-between align-items-center mx-auto px-0">
-          <p class="col-md-4 mb-0 text-light">Enjoy the low price. We are tracking any intention of piracy.</p>
+          <p class="col-md-4 mb-0 text-secondary">Enjoy the low price. We are tracking any intention of piracy.</p>
           <div class="col-md-4 mb-0 d-flex justify-content-end align-items-center">
-            <p class="mb-0 text-light">&copy; 2020 NEXGEN is Proudly Powered by</p>
+            <p class="mb-0 text-secondary">&copy; 2020 NEXGEN is Proudly Powered by</p>
             <a href="#" class="nav-link text-success ms-1">Codings.</a>
           </div>
           
