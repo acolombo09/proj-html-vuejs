@@ -63,8 +63,8 @@ export default {
           </div>
 
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <button type="button" class="btn btn-success custom-button px-4 me-3 text-icons-color">GET IN TOUCH</button>
-            <button type="button" class="btn btn-outline-light px-4 text-icons-color border border-icons-color">READ MORE</button>
+            <button type="button" class="btn btn-outline-light text-icons-color border border-icons-color px-4 me-3 custom-button-hover">GET IN TOUCH</button>
+            <button type="button" class="btn btn-outline-light text-icons-color border border-icons-color px-4 custom-button-hover">READ MORE</button>
           </div>
         </div>
         <div class="col-md-6">
@@ -104,6 +104,12 @@ export default {
 }
 
 .custom-button {
+  background-color: $text-icons-color !important;
+  color: white !important;
+  border: none !important;
+}
+
+.custom-button-hover:hover {
   background-color: $text-icons-color !important;
   color: white !important;
   border: none !important;

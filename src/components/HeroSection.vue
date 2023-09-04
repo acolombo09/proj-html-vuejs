@@ -9,8 +9,18 @@ export default {
         { name: "ABOUT"},
         { name: "PROJECTS"},
         { name: "RESULTS"},
+        { name: "GET IN TOUCH"},
       ],
+      isHovered: false,
     };
+  },
+  methods: {
+    handleMouseOver() {
+      this.isHovered = true;
+    },
+    handleMouseOut() {
+      this.isHovered = false;
+    },
   },
 };
 </script>
@@ -26,10 +36,9 @@ export default {
             <img src="../assets/logo.PNG" alt="nexgen-logo-header">
             <ul class="nav nav-pills">
               <li class="nav-item me-3" v-for="link in navLinks">
-                <a href="#" class="nav-link text-success">{{link.name}}</a>
-              </li>
-              <li class="nav-item me-3">
-                <a href="#" class="nav-link active rounded-1">GET IN TOUCH</a>
+                <a href="#" class="nav-link text-header-secondary"
+                v-bind:class="{ 'nav-link-hover': isHovered }" @mouseover="handleMouseOver" @mouseout="handleMouseOut"
+                >{{link.name}}</a>
               </li>
             </ul>
           </div>
@@ -40,8 +49,8 @@ export default {
           <h2 class="display-4 pt-5 fw-bold text-body-emphasis">Ready Team</h2>
           <p class="lead mb-4">No matter what your company needs, we will be ready to assist you in the best possible way.</p>
           <div class="d-grid gap-2 d-sm-flex justify-content-center mb-5">
-            <button type="button" class="btn btn-success px-4 me-sm-3 rounded-1">GET IN TOUCH</button>
-            <button type="button" class="btn btn-outline-success px-4 rounded-1">READ MORE</button>
+            <button type="button" class="btn btn-outline-light text-icons-color border border-icons-color px-4 me-3 custom-button-hover">GET IN TOUCH</button>
+            <button type="button" class="btn btn-outline-light text-icons-color border border-icons-color px-4 custom-button-hover">READ MORE</button>
           </div>
         </div>
       </div>
@@ -57,6 +66,12 @@ export default {
   position: relative;
   height: 100vh;
   overflow: hidden; /* Nasconde il contenuto oltre l'altezza specificata */
+}
+
+.nav-link-hover:hover {
+  background-color: $text-icons-color !important;
+  color: white !important;
+  border: none !important;
 }
 
 .second-bg {
@@ -89,6 +104,34 @@ export default {
 
 .header-bottom img {
   width: 150px;
+}
+
+.text-icons-color {
+  color: $text-icons-color !important;
+}
+
+.header-footer-color {
+  color: $header-footer-text-color !important;
+}
+
+.text-header-secondary {
+  color: $text-color !important;
+}
+
+.border-icons-color {
+  border-color: $text-icons-color !important;
+}
+
+.custom-button {
+  background-color: $text-icons-color !important;
+  color: white !important;
+  border: none !important;
+}
+
+.custom-button-hover:hover {
+  background-color: $text-icons-color !important;
+  color: white !important;
+  border: none !important;
 }
 
 </style>
