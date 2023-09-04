@@ -36,11 +36,12 @@ export default {
     <!-- Cards section Portfolio actions & Projects -->
     <PortfolioSection></PortfolioSection>
 
+    <!-- Results  & Sponsors Section -->
+    <ResultsSection></ResultsSection>
+
     <!-- Contact Section -->
     <ContactSection></ContactSection>
 
-    <!-- Results  & Sponsors Section -->
-    <ResultsSection></ResultsSection>
   </main>
 </template>
 
