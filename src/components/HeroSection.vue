@@ -39,8 +39,9 @@ export default {
             <ul class="nav nav-pills">
               <li class="nav-item me-3" v-for="link in navLinks">
                 <a href="#" class="nav-link text-header-secondary"
-                v-bind:class="{ 'nav-link-hover': isHovered }" @mouseover="handleMouseOver" @mouseout="handleMouseOut"
-                >{{link.name}}</a>
+                v-bind:class="{ 'nav-link-hover': isHovered }" 
+                @mouseover="handleMouseOver" 
+                @mouseout="handleMouseOut">{{link.name}}</a>
               </li>
             </ul>
           </div>

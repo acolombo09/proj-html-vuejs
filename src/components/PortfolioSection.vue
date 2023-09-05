@@ -12,17 +12,15 @@ export default {
         { name: "ENVIRONMENT"},
         { name: "TECHNOLOGY"},
       ],
-      // Aggiungo questa variabile per tenere traccia del link evidenziato
-      highlightedLink: null,
+      isHovered: false,
     };
   },
   methods: {
-    highlightLink(linkName) {
-      this.highlightedLink = linkName;
+    handleMouseOver() {
+      this.isHovered = true;
     },
-    toggleHighlight() {
-      this.highlightedLink = null; 
-      // Rimuove l'evidenziazione quando viene fatto clic
+    handleMouseOut() {
+      this.isHovered = false;
     },
   },
 };
@@ -38,10 +36,9 @@ export default {
         <ul class="nav nav-pills">
           <li class="nav-item me-3" v-for="link in projectsLinks">
             <a href="#" class="nav-link text-secondary"
-            :class="{ 'highlight-text': link.name === highlightedLink }" 
-            @mouseover="highlightLink(link.name)" 
-            @mouseout="highlightLink(null)" 
-            @click="toggleHighlight">{{link.name}}</a>
+              v-bind:class="{ 'nav-link-hover': isHovered }" 
+              @mouseover="handleMouseOver" 
+              @mouseout="handleMouseOut">{{link.name}}</a>
           </li>
         </ul>
       </div>
@@ -131,29 +128,35 @@ export default {
   opacity: 1;
 }
 
-.hover-content {
-  display: none; /* Nascondi il contenuto all'inizio */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.8); /* Sfondo nero trasparente */
-}
-
-.card:hover .hover-content {
-  display: flex; /* Mostra il contenuto all'hover */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .highlight-text {
-  background-color: rgba(#00A6A6, 0.2); 
-  color: $text-icons-color; 
+  background-color: rgba(#00A6A6, 0.2);
+  color: $main-color;
+}
+
+// .hover-content {
+//   display: none; /* Nascondi il contenuto all'inizio */
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: rgba(0, 0, 0, 0.8); /* Sfondo nero trasparente */
+// }
+
+// .card:hover .hover-content {
+//   display: flex; /* Mostra il contenuto all'hover */
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+
+.nav-link-hover:hover {
+  background-color: rgba(#00A6A6, 0.2) !important;
+  color: $text-icons-color !important;
 }
 
 .text-icons-color {

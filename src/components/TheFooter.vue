@@ -78,8 +78,9 @@ export default {
                 </div>
               </div>
               <div class="dbox w-100 d-flex align-items-start my-2">
-                <button type="button" class="btn btn-outline-light text-icons-color border 
-                  border-icons-color px-4 custom-button-hover rounded-1">GET IN TOUCH</button>
+                <button type="button" class="btn btn-outline-light text-icons-color border border-icons-color px-4 rounded-1 custom-button-hover">
+                  GET IN TOUCH
+                </button>
               </div>
             </div>
           </div>

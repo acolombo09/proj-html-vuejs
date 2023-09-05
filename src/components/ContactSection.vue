@@ -30,8 +30,11 @@ export default {
                   <form method="POST" id="contactForm" name="contactForm" novalidate="novalidate">
                     <div class="row mt-5">
                       <div class="col-md-6 my-2">
-                        <div class="form-group">
-                        <input type="text" class="form-control rounded-1" name="name" id="name" placeholder="Name">
+                        <div class="form-group position-relative">
+                          <input type="text" class="form-control rounded-1" name="name" id="name" placeholder="Name">
+                          <div class="input-icon">
+                            <img src="../assets/images/image (1).png" alt="Icona">
+                          </div>
                         </div>
                       </div>
                       <div class="col-md-6 my-2">
@@ -56,10 +59,10 @@ export default {
                       </div>
                       <div class="col-md-12 my-2">
                         <div class="form-group">
-                          <textarea name="message" class="form-control rounded-1" id="message" cols="30" rows="7" placeholder="Message"></textarea>
+                          <textarea name="message" class="form-control rounded-1" id="message" cols="30" rows="6" placeholder="Message" style="resize: none;"></textarea>
                         </div>
                       </div>
-                      <div class="col-md-12 my-2">
+                      <div class="col-md-12 my-3">
                         <div class="form-group">
                           <input type="submit" value="SEND" class="btn btn-success rounded-1 custom-button">
                           <div class="submitting"></div>
@@ -85,7 +88,7 @@ export default {
                     <div class="icon d-flex align-items-center justify-content-center">
                       <i class="fa-solid fa-phone text-main-color"></i>
                     </div>
-                    <div class="ms-4">
+                    <div class="ms-3">
                       <a href="#">
                         <p class="d-inline-block text-main-color">+1 (305) 1234-5678</p>
                       </a>
@@ -95,7 +98,7 @@ export default {
                     <div class="icon d-flex align-items-center justify-content-center">
                       <i class="fa-solid fa-envelope text-main-color"></i>
                     </div>
-                    <div class="ms-4">
+                    <div class="ms-3">
                       <a href="#">
                         <p class="d-inline-block text-main-color">hello@example.com</p>
                       </a>
@@ -105,7 +108,7 @@ export default {
                     <div class="icon d-flex align-items-center justify-content-center">
                       <i class="fa-solid fa-location-dot text-main-color"></i>
                     </div>
-                    <div class="ms-4">
+                    <div class="ms-3">
                       <a href="#">
                         <p class="d-inline-block text-main-color">Main Avenue, 987</p>
                       </a>
@@ -185,6 +188,19 @@ export default {
   position: relative;
   z-index: 2; 
   color: $main-color !important;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px; 
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.input-icon img {
+  width: 15px; 
+  height: auto; 
 }
 
 </style>
