@@ -20,8 +20,8 @@ export default {
               <div class="col-md-7 d-flex">
                 <div class="contact-wrap w-100 p-5">
                   <div class="mb-4">
-                    <h6 class="text-success mb-3 fw-bold">SEND A MESSAGE</h6>
-                    <h2 class="mb-4 fw-bold">Get in Touch</h2>
+                    <h6 class="text-icons-color mb-3 fw-bold">SEND A MESSAGE</h6>
+                    <h2 class="mb-4 fw-bold text-body-emphasis">Get in <mark class="highlight-text">Touch</mark></h2>
                     <p class="text-secondary">
                       We will respond to your message as soon as possible.
                     </p>
@@ -61,7 +61,7 @@ export default {
                       </div>
                       <div class="col-md-12 my-2">
                         <div class="form-group">
-                          <input type="submit" value="SEND" class="btn btn-success rounded-1">
+                          <input type="submit" value="SEND" class="btn btn-success rounded-1 custom-button">
                           <div class="submitting"></div>
                         </div>
                       </div>
@@ -83,36 +83,37 @@ export default {
                   
                   <div class="dbox w-100 d-flex align-items-start my-3">
                     <div class="icon d-flex align-items-center justify-content-center">
-                      <i class="fa-solid fa-phone"></i>
+                      <i class="fa-solid fa-phone text-main-color"></i>
                     </div>
                     <div class="ms-4">
                       <a href="#">
-                        <p class="d-inline-block text-success">+1 (305) 1234-5678</p>
+                        <p class="d-inline-block text-main-color">+1 (305) 1234-5678</p>
                       </a>
                     </div>
                   </div>
                   <div class="dbox w-100 d-flex align-items-start my-3">
                     <div class="icon d-flex align-items-center justify-content-center">
-                      <i class="fa-solid fa-envelope"></i>
+                      <i class="fa-solid fa-envelope text-main-color"></i>
                     </div>
                     <div class="ms-4">
                       <a href="#">
-                        <p class="d-inline-block text-success">hello@example.com</p>
+                        <p class="d-inline-block text-main-color">hello@example.com</p>
                       </a>
                     </div>
                   </div>
                   <div class="dbox w-100 d-flex align-items-start my-3">
                     <div class="icon d-flex align-items-center justify-content-center">
-                      <i class="fa-solid fa-location-dot"></i>
+                      <i class="fa-solid fa-location-dot text-main-color"></i>
                     </div>
                     <div class="ms-4">
                       <a href="#">
-                        <p class="d-inline-block text-success">Main Avenue, 987</p>
+                        <p class="d-inline-block text-main-color">Main Avenue, 987</p>
                       </a>
                     </div>
                   </div>
                   <div class="dbox w-100 d-flex align-items-start my-3">
-                    <button type="button" class="btn btn-outline-success px-4 rounded-1">VIEW MAP</button>
+                    <button type="button" class="btn btn-outline-light text-icons-color border 
+                    border-icons-color px-4 custom-button-hover rounded-1">VIEW MAP</button>
                   </div>
                 </div>
               </div>
@@ -130,6 +131,60 @@ export default {
 
 .form-control, select {
   background-color: $form-bg-color;
+}
+
+.text-icons-color {
+  color: $text-icons-color !important;
+}
+
+.text-main-color {
+  color: $main-color !important;
+}
+
+.highlight-text {
+  background-color: rgba(#00A6A6, 0.2); 
+  color: $main-color; 
+}
+
+.custom-button {
+  background-color: $main-color !important;
+  color: white !important;
+  border: none !important;
+}
+
+.border-icons-color {
+  border-color: $text-icons-color !important;
+}
+
+.custom-button-hover:hover {
+  background-color: $text-icons-color !important;
+  color: white !important;
+  border: none !important;
+}
+
+.icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $highlight-bg-color;
+  border-radius: 50%;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.icon i {
+  position: relative;
+  z-index: 2; 
+  color: $main-color !important;
 }
 
 </style>

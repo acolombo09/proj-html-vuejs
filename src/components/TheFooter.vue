@@ -40,7 +40,9 @@ export default {
           <div class="col mx-4 text-light">
             <div class="p-4">
               <div class="mb-3">
-                <img src="../assets/logo.PNG" alt="nexgen-logo-footer">
+                <a href="#">
+                  <img src="../assets/logo.PNG" alt="nexgen-logo-footer">
+                </a>
                 <p class="text-secondary my-4">
                   A Functional HTML Template for Corporate & Business
                 </p>
@@ -49,7 +51,7 @@ export default {
                 <div class="icon d-flex align-items-center justify-content-center">
                   <i class="fa-solid fa-phone"></i>
                 </div>
-                <div class="ms-4">
+                <div class="ms-3">
                   <a href="#">
                     <p class="d-inline-block text-secondary">+1 (305) 1234-5678</p>
                   </a>
@@ -59,7 +61,7 @@ export default {
                 <div class="icon d-flex align-items-center justify-content-center">
                   <i class="fa-solid fa-envelope"></i>
                 </div>
-                <div class="ms-4">
+                <div class="ms-3">
                   <a href="#">
                     <p class="d-inline-block text-secondary">hello@example.com</p>
                   </a>
@@ -69,14 +71,15 @@ export default {
                 <div class="icon d-flex align-items-center justify-content-center">
                   <i class="fa-solid fa-location-dot"></i>
                 </div>
-                <div class="ms-4">
+                <div class="ms-3">
                   <a href="#">
                     <p class="d-inline-block text-secondary">Main Avenue, 987</p>
                   </a>
                 </div>
               </div>
               <div class="dbox w-100 d-flex align-items-start my-2">
-                <button type="button" class="btn btn-outline-success px-4 rounded-1">GET IN TOUCH</button>
+                <button type="button" class="btn btn-outline-light text-icons-color border 
+                  border-icons-color px-4 custom-button-hover rounded-1">GET IN TOUCH</button>
               </div>
             </div>
           </div>
@@ -120,7 +123,7 @@ export default {
           <p class="col-md-4 mb-0 text-secondary">Enjoy the low price. We are tracking any intention of piracy.</p>
           <div class="col-md-4 mb-0 d-flex justify-content-end align-items-center">
             <p class="mb-0 text-secondary">&copy; 2020 NEXGEN is Proudly Powered by</p>
-            <a href="#" class="nav-link text-success ms-1">Codings.</a>
+            <a href="#" class="nav-link text-icons-color ms-1">Codings.</a>
           </div>
           
         </div>
@@ -136,6 +139,30 @@ export default {
 
 .footer-upper img {
   width: 150px;
+}
+
+.text-icons-color {
+  color: $text-icons-color !important;
+}
+
+.text-main-color {
+  color: $main-color !important;
+}
+
+.custom-button {
+  background-color: $main-color !important;
+  color: white !important;
+  border: none !important;
+}
+
+.border-icons-color {
+  border-color: $text-icons-color !important;
+}
+
+.custom-button-hover:hover {
+  background-color: $text-icons-color !important;
+  color: white !important;
+  border: none !important;
 }
 
 </style>
