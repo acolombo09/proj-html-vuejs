@@ -14,24 +14,24 @@ export default {
   <div class="results-section px-4 py-5">
     <div class="col-md-9 mx-auto my-5">
       <div class="d-flex flex-column justify-content-center align-items-center">
-        <h6 class="pb-2 text-success">WHAT ARE WE DOING</h6>
-        <h2 class="pb-2 text-white fw-bold">Results in Numbers</h2>
+        <h6 class="pb-2 fw-bold text-icons-color">WHAT ARE WE DOING</h6>
+        <h2 class="pb-2 text-white fw-bold"><mark class="highlight-text">Results</mark> in Numbers</h2>
       </div>
       <div class="row row-cols-md-4 g-4 py-5 justify-content-center">
           <div class="col d-flex flex-column justify-content-center align-items-center">
-            <h3 class="fw-bold mb-3 fs-4 text-success">128</h3>
+            <h3 class="fw-bold mb-3 fs-3 text-icons-color">128</h3>
             <h6 class="fw-bold text-white">Certifications</h6>
           </div>
           <div class="col d-flex flex-column justify-content-center align-items-center">
-            <h3 class="fw-bold mb-3 fs-4 text-success">230</h3>
+            <h3 class="fw-bold mb-3 fs-3 text-icons-color">230</h3>
             <h6 class="fw-bold text-white">Employees</h6>
           </div>
           <div class="col d-flex flex-column justify-content-center align-items-center">
-            <h3 class="fw-bold mb-3 fs-4 text-success">517</h3>
+            <h3 class="fw-bold mb-3 fs-3 text-icons-color">517</h3>
             <h6 class="fw-bold text-white">Customers</h6>
           </div>
           <div class="col d-flex flex-column justify-content-center align-items-center">
-            <h3 class="fw-bold mb-3 fs-4 text-success">94</h3>
+            <h3 class="fw-bold mb-3 fs-3 text-icons-color">94</h3>
             <h6 class="fw-bold text-white">Countries Served</h6>
           </div>
         </div>
@@ -99,8 +99,17 @@ export default {
   .nav-item a img {
   width: 90px;
   height: auto;
+  filter: brightness(2.1); /* Regolo la luminosità causa immagini scure */
   }
 }
 
+.text-icons-color {
+  color: $text-icons-color !important;
+}
+
+.highlight-text {
+  background-color: rgba(#00A6A6, 0.2); 
+  color: inherit; 
+}
 
 </style>
