@@ -16,7 +16,7 @@ export default {
       <div class="cards-heading d-flex justify-content-between">
         <div class="col-9 d-flex flex-column align-content-end">
           <h6 class="pb-2 fw-bold text-success text-icons-color">OUR BUSINESS AREAS</h6>
-          <h2 class="pb-2 fw-bold">Excellence in Services</h2>
+          <h2 class="pb-2 fw-bold">Excellence in <mark class="highlight-text">Services</mark></h2>
           <p class="lead text-secondary mb-0">
             We are leaders in providing consultancy services with a set of cutting-edge technologies
             and a team of experience and renowned professionals. These are some options that you can hire.
@@ -164,6 +164,11 @@ export default {
   color: $text-icons-color !important;
 }
 
+.highlight-text {
+  background-color: rgba(#00A6A6, 0.2);
+  color: $main-color;
+}
+
 .custom-button {
   background-color: $text-icons-color !important;
   color: white !important;
@@ -198,6 +203,5 @@ export default {
   z-index: 2;
   color: $text-icons-color;
 }
-
 
 </style>

@@ -49,8 +49,8 @@ export default {
       </div>
       <div class="px-4 py-5 text-center">
         <div class="col-md-4 pt-5 mx-auto d-flex flex-column justify-content-center align-items-center">
-          <h2 class="display-4 pt-5 fw-bold text-body-emphasis">Ready Team</h2>
-          <p class="lead mb-4">No matter what your company needs, we will be ready to assist you in the best possible way.</p>
+          <h2 class="display-4 pt-5 fw-bold text-body-emphasis">Ready <mark class="highlight-text">Team</mark></h2>
+          <p class="lead mb-4 text-secondary">No matter what your company needs, we will be ready to assist you in the best possible way.</p>
           <div class="d-grid gap-2 d-sm-flex justify-content-center mb-5">
             <button type="button" class="btn btn-outline-light text-icons-color border border-icons-color px-4 me-3 custom-button-hover">GET IN TOUCH</button>
             <button type="button" class="btn btn-outline-light text-icons-color border border-icons-color px-4 custom-button-hover">READ MORE</button>
@@ -135,6 +135,11 @@ export default {
   background-color: $text-icons-color !important;
   color: white !important;
   border: none !important;
+}
+
+.highlight-text {
+  background-color: rgba(#00A6A6, 0.2);
+  color: $main-color;
 }
 
 </style>
